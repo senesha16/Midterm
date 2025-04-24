@@ -110,6 +110,7 @@ section{
 }
 
 /* Home Section */
+
 .home {
     display: flex;
     flex-direction: column;
