@@ -1,0 +1,411 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: #f4c6cd;
+    color: white;
+    text-align: center;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background: #fff2ec;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+header a {
+    text-decoration: none; 
+    color: #FF748B; 
+}
+
+.logo{
+    font-size: 3rem;
+    color: #FF748B;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
+
+nav a{
+    font-size: 1.8rem;
+    color: #FF748B;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover nav:active{
+    color: #FF748B;
+    border-bottom: 3px solid #FF748B;
+}
+
+@media(max-width:995px){
+    nav{
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid #FF748B;
+        border-bottom: 3px solid #FF748B;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem solid;
+        background-color: #161616;
+        border-top: 0.1rem solid rgba(0,0,0,0.1);
+    }
+
+    nav.active{
+        display: block;
+    }
+
+    nav a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    nav a:hover,
+    nav a.active{
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid #FF748B;
+    }
+}
+
+span{
+    color: #FF748B;
+}
+
+section{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+    padding-top: 10rem;
+}
+
+/* Home Section */
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh;
+    text-align: center;
+    color: white; 
+    padding: 4rem; 
+}
+
+.home h1 {
+    font-size: 4rem; 
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.home p {
+    font-size: 2rem;
+    line-height: 1.8;
+}
+
+.home .btn {
+    font-size: 1.6rem;
+    padding: 1rem 2.8rem;
+    background-color: transparent;
+    border-radius: 4rem;
+    color: #FF748B;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid #FF748B;
+    transition: 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+
+.about h1, .skills h1, #education h1, #projects h1, #contact h1 {
+    font-family: 'Poppins', sans-serif; 
+    font-weight: 700;
+    font-size: 5rem;
+    text-align: center;
+}
+
+#home h1 span, .about h1 span, #skills h1 span, #education h1 span, #projects h1 span, #contact span {
+    color: #FF748B;
+    font-family: 'Poppins', sans-serif; 
+    font-weight: 700; 
+    font-size: 5rem;
+    
+}
+
+#home {
+    background: url('./img/homebg.png') no-repeat center center/cover; 
+    color: #af4523;
+    text-align: center;
+    padding: 100px 20px;
+    min-height: 100vh; /* Ensure it covers the full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#home .intro-text {
+    font-family: 'Inria Serif', serif;
+    font-size: 3rem;
+    margin-bottom: 10px;
+    margin-top: 8rem;
+}
+
+#home .main-name {
+    display: inline-flex;
+    align-items: baseline;
+    justify-content: center;
+    font-family: 'Imperial Script', cursive;
+    color: #af4523;
+    gap: 2rem; 
+}
+
+#home .main-name .my-name {
+    font-size: 15rem;
+    line-height: 0.5;
+    font-family: 'Imperial Script', cursive;
+}
+
+#home .subtext {
+    font-family: 'Inria Serif', serif;
+    font-size: 3rem;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#home .subtext::before, #home .subtext::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: #af4523;
+    max-width: 80px;
+}
+
+#home .button-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+#home .button-group .btn {
+    font-size: 1.6rem;
+    padding: 1rem 2.8rem;
+    background-color: transparent;
+    border-radius: 4rem;
+    color: #FF748B;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid #FF748B;
+    transition: 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+}
+
+#home .button-group .btn:hover {
+    transform: scale(1.03);
+    background-color: #FF748B;
+    color: white;
+    box-shadow: 0 0 25px #FF748B;
+}
+
+/* About Section */
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+    background: url('./img/bg2.png') no-repeat center center/cover; 
+    text-align: left; 
+    min-height: 100vh; /* Ensure it covers the full viewport height */
+    padding: 5rem 9%; /* Add padding for spacing */
+    color: white; /* Ensure text is readable on the background */
+}
+
+.about-img {
+    order: 2; 
+    padding: 2rem;
+    text-align: center;
+}
+
+.about-content {
+    order: 1;
+    flex: 1; 
+    padding: 2rem;
+}
+
+.about-content h2 {
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+    color: #FFC6C6;
+}
+
+.about-content h3 {
+    font-size: 4rem;
+    margin-bottom: 1.5rem; 
+    font-weight: 700;
+}
+
+.about-content p{
+    font-size: 1.8rem; 
+    margin: 1.5rem 0;
+    line-height: 1.8; 
+    color: black; 
+    text-align: justify; 
+}
+
+.about-img img {
+    position: relative;
+    width: 100%;
+    max-width: 300px; /* Adjust as needed */
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid #FF748B;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.about-img img:hover{
+    transform: scale(1); 
+    color: black;
+    background-color: #FF748B;
+    box-shadow: 0  0 25px #FF748B;
+}
+
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid #FF748B;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: #FF748B;
+}
+
+social-icons a:hover{
+    color: black;
+    transform: scale(1.3) translateY(-5px);
+    background-color: #FF748B;
+    box-shadow: 0  0 25px #FF748B;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: transparent;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: #FF748B;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid #FF748B;
+    transition: 0.3s ease;
+    cursor: pointer;
+    text-align: left;
+    margin-left: 0;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: flex-start; 
+    gap: 1.5rem; 
+    margin-bottom: 2rem; 
+}
+
+.button-group {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center; 
+    gap: 2rem; 
+    margin: auto; 
+}
+
+.button-group .btn {
+    flex: 1; 
+    text-align: center; 
+}
+
+.btn:hover{
+    transform: scale(1.03);
+    background-color: #FF748B;
+    color: white;
+    box-shadow: 0 0 25px #FF748B;
+}
+
+/* Contact Form Section */
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.input-box {
+    margin-bottom: 1.5rem; 
+}
+
+.input-box input, .input-box textarea {
+    width: 100%; 
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: none; 
+}
+
+.container {
+    width: 100%; /* Adjust the width as needed */
+    max-width: 1400px; /* Constrain the maximum width */
+    margin: 0 auto; /* Center the container */
+    padding: 0 2rem; /* Add horizontal padding */
+    border: 5px solid pink; /* Add a light pink border */
+    border-radius: 15px; /* Add rounded corners */
+    background-color: #fff; /* Optional: Add a background color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
