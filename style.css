@@ -149,14 +149,15 @@ section{
 }
 
 
-.about h1, .skills h1, #education h1, #projects h1, #contact h1 {
+.about h1, .skills h1, #education h1, #hobbies h1, #contact h1 {
     font-family: 'Poppins', sans-serif; 
     font-weight: 700;
     font-size: 5rem;
     text-align: center;
+    color:#FFC6C6;
 }
 
-#home h1 span, .about h1 span, #skills h1 span, #education h1 span, #projects h1 span, #contact span {
+#home h1 span, .about h1 span, #skills h1 span, #education h1 span, #hobbies h1 span, #contact span {
     color: #FF748B;
     font-family: 'Poppins', sans-serif; 
     font-weight: 700; 
@@ -399,12 +400,21 @@ textarea {
     resize: none; 
 }
 
+#contact .input-box {
+    padding: 0; /* Remove padding from the input box */
+    margin-bottom: 1rem; /* Adjust spacing between input fields */
+}
+
+#contact .form-control {
+    padding: 0.5rem 1rem; /* Adjust padding inside the input fields */
+}
+
 .container {
     width: 100%; /* Adjust the width as needed */
     max-width: 1400px; /* Constrain the maximum width */
     margin: 0 auto; /* Center the container */
     padding: 0 2rem; /* Add horizontal padding */
-    border: 5px solid pink; /* Add a light pink border */
+    border: 5px solid #FFC6C6; /* Add a light #FFC6C6 border */
     border-radius: 15px; /* Add rounded corners */
     background-color: #fff; /* Optional: Add a background color */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
@@ -416,7 +426,7 @@ textarea {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: url('./img/bg1.png') no-repeat center center/cover;
+    background: url('./img/bg2.png') no-repeat center center/cover;
     min-height: 100vh;
     padding: 5rem 9%;
     color: #FF748B;
@@ -426,7 +436,7 @@ textarea {
     font-family: 'Poppins', sans-serif;
     font-size: 5rem;
     font-weight: 700;
-    color: pink;
+    color: #FFC6C6;
     margin-bottom: 2rem;
 }
 
