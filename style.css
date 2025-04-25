@@ -5,7 +5,7 @@
     text-decoration: none;
     border: none;
     outline: none;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins Bold', sans-serif;
 }
 
 html{
@@ -150,7 +150,7 @@ section{
 
 
 .about h1, .skills h1, #education h1, #projects h1, #contact h1 {
-    font-family: 'Poppins', sans-serif; 
+    font-family: 'Poppins Bold', sans-serif; 
     font-weight: 700;
     font-size: 5rem;
     text-align: center;
@@ -158,7 +158,7 @@ section{
 
 #home h1 span, .about h1 span, #skills h1 span, #education h1 span, #projects h1 span, #contact span {
     color: #FF748B;
-    font-family: 'Poppins', sans-serif; 
+    font-family: 'Poppins Bold', sans-serif; 
     font-weight: 700; 
     font-size: 5rem;
     
@@ -423,7 +423,7 @@ textarea {
 }
 
 .skills h2 {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins Bold', sans-serif;
     font-size: 5rem;
     font-weight: 700;
     color: pink; /* Match the theme color */
