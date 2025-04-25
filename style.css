@@ -439,10 +439,16 @@ textarea {
 
 .skills span1{
     color: black;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
+
+.skills span2{
+    color: black;
+    font-size: 2rem;
+}
+
 .progress {
-    height: 2rem; /* Increase the height of the progress bar */
+    height: 1.7rem; /* Increase the height of the progress bar */
     background-color: #DBD3D3; /* Light background for the progress bar */
     border-radius: 15px; /* Keep rounded corners */
     overflow: hidden;
