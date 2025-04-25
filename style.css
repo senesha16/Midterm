@@ -489,7 +489,7 @@ textarea {
     transition: width 0.3s ease;
 }
 
-#skills .mt-2 {
+#skills p {
     color: #FF748B; /* Set the text color to black */
 }
 
@@ -559,6 +559,6 @@ textarea {
     color: #FF748B;
 }
 
-.creativity-progress, .communication-progress, .problem-solving-progress, .teamwork-progress {
+.creativity-progress, .technology-basics-progress, .digital-citizenship-progress, .content-creation-progress,.information-management-progress, .collaboration-progress, .safety-security-progress {
     background: conic-gradient(#FF748B 306deg, pink 0deg);
 }
