@@ -5,7 +5,7 @@
     text-decoration: none;
     border: none;
     outline: none;
-    font-family: 'Poppins Bold', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 html{
@@ -150,7 +150,7 @@ section{
 
 
 .about h1, .skills h1, #education h1, #projects h1, #contact h1 {
-    font-family: 'Poppins Bold', sans-serif; 
+    font-family: 'Poppins', sans-serif; 
     font-weight: 700;
     font-size: 5rem;
     text-align: center;
@@ -158,7 +158,7 @@ section{
 
 #home h1 span, .about h1 span, #skills h1 span, #education h1 span, #projects h1 span, #contact span {
     color: #FF748B;
-    font-family: 'Poppins Bold', sans-serif; 
+    font-family: 'Poppins', sans-serif; 
     font-weight: 700; 
     font-size: 5rem;
     
@@ -252,6 +252,7 @@ section{
     align-items: center;
     text-align: center;
     background: url('./img/bg2.png') no-repeat center center/cover; 
+    text-align: left; 
     min-height: 100vh; /* Ensure it covers the full viewport height */
     padding: 5rem 9%; /* Add padding for spacing */
     color: white; /* Ensure text is readable on the background */
@@ -409,126 +410,72 @@ textarea {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
 }
 
-/* Skills Section */
 .skills {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: url('./img/bg2.png') no-repeat center center/cover; /* Match the background theme */
-    min-height: 100vh; /* Ensure it covers the full viewport height */
-    padding: 5rem 9%; /* Add padding for spacing */
-    color: #FF748B; /* Match the theme color */
+    background: url('./img/bg1.png') no-repeat center center/cover;
+    min-height: 100vh;
+    padding: 5rem 9%;
+    color: #FF748B;
 }
 
 .skills h2 {
-    font-family: 'Poppins Bold', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 5rem;
     font-weight: 700;
-    color: pink; /* Match the theme color */
+    color: pink;
     margin-bottom: 2rem;
 }
 
 .skills p {
     font-size: 1.8rem;
     line-height: 1.8;
-    color: white; /* Ensure readability */
+    color: white;
     margin-bottom: 3rem;
 }
 
-.skills .skill-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem; /* Add spacing between icons */
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+.skills span1{
+    color: #fff2ec;
 }
-
-.skills .skill-icons i {
-    font-size: 4rem; /* Adjust icon size */
-    color: #FF748B; /* Match the theme color */
-    transition: 0.3s ease;
-}
-
-.skills .skill-icons i:hover {
-    color: white; /* Change color on hover */
-    transform: scale(1.2); /* Add a hover effect */
-}
-
-.skills .progress-bars {
-    width: 100%;
-    max-width: 800px;
-    margin: 3rem auto;
-}
-
-.skills .progress-bar {
-    margin-bottom: 2rem;
-}
-
-.skills .progress-bar .label {
-    font-size: 1.6rem;
-    color: white; /* Ensure readability */
-    margin-bottom: 0.5rem;
-}
-
-.skills .progress-bar .bar {
-    width: 100%;
-    height: 10px;
-    border-radius: 5px;
+.progress {
+    height: 2rem; /* Increase the height of the progress bar */
+    background-color: #DBD3D3; /* Light background for the progress bar */
+    border-radius: 15px; /* Keep rounded corners */
     overflow: hidden;
-    position: relative;
 }
 
-.skills .progress-bar .bar .progress {
-    height: 100%;
-    background-color: #FF748B; /* Match the theme color */
-    width: 75%; /* Adjust width based on skill level */
-    border-radius: 5px;
-    transition: width 0.3s ease;
+.progress-bar {
+    background-color: #f4c6cd; /* Match the theme */
+    font-size: 1.4rem; /* Increase the font size inside the progress bar */
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    line-height: 2.5rem; /* Center the text vertically */
+    transition: width 0.5s ease; /* Smooth animation for the progress bar */
 }
 
 #skills p {
-    color: #FF748B; /* Set the text color to black */
+    color: #FF748B;
+    margin-top: 0.5rem;
+    font-size: 1rem;
 }
 
-.text-cyan {
-    color: #00ddeb !important;
+#skills .row.text-center .col-6 {
+    margin-bottom: -1rem;
 }
 
-.bg-cyan {
-    background-color: #f4c6cd !important;
-}
-
-/* Icon Colors */
-.html-icon {
-    color: #e34c26;
-    font-size: 1.5rem;
-}
-
-.css-icon {
-    color: #264de4;
-    font-size: 1.5rem;
-}
-
-.js-icon {
-    color: #f0db4f;
-    font-size: 1.5rem;
-}
-
-.python-icon {
-    color: #ff69b4;
-    font-size: 1.5rem;
-}
-
-.react-icon {
-    color: #61dafb;
-    font-size: 1.5rem;
+/* Icon Colors and Size */
+.html-icon, .css-icon, .js-icon, .java-icon, .mysql-icon, .php-icon { 
+    color: #161616; 
+    font-size: 3rem; /* Increase the font size */
 }
 
 /* Progress Bar Height */
 .progress-custom-height {
-    height: 10px;
+    height: 8px;
 }
 
 /* Circular Progress Bars */
@@ -555,9 +502,12 @@ textarea {
 .progress-value {
     position: relative;
     font-size: 2rem;
-    color: #FF748B;
+    color: black;
 }
 
-.creativity-progress, .technology-basics-progress, .digital-citizenship-progress, .content-creation-progress,.information-management-progress, .collaboration-progress, .safety-security-progress {
-    background: conic-gradient(#FF748B 306deg, pink 0deg);
-}
+.technology-basics-progress { background: conic-gradient(#FF748B 280.8deg, #DBD3D3 0deg); }
+.digital-citizenship-progress { background: conic-gradient(#FF748B 342deg, #DBD3D3 0deg); }
+.information-management-progress { background: conic-gradient(#FF748B 295.2deg, #DBD3D3 0deg); }
+.content-creation-progress { background: conic-gradient(#FF748B 284.4deg, #DBD3D3 0deg); }
+.collaboration-progress { background: conic-gradient(#FF748B 331.2deg, #DBD3D3 0deg); }
+.safety-security-progress { background: conic-gradient(#FF748B 345.6deg, #DBD3D3 0deg); }
