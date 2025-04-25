@@ -447,13 +447,6 @@ textarea {
     margin-bottom: 2rem;
 }
 
-.skills p {
-    font-size: 1.8rem;
-    line-height: 1.8;
-    color: white;
-    margin-bottom: 3rem;
-}
-
 .skills span1{
     color: black;
     font-size: 1.2rem;
@@ -483,8 +476,16 @@ textarea {
 
 #skills p {
     color: #FF748B;
-    margin-top: 0.5rem;
-    font-size: 1rem;
+    margin-top: 2rem; /* Space above the paragraph */
+    margin-bottom: 2rem; /* Space below the paragraph */
+    font-size: 2rem;
+}
+
+.skills p {
+    line-height: 1.5rem; /* Adjust line height for better readability */
+    color: white;
+    margin-top: 1.5rem; /* Add margin above */
+    margin-bottom: 2.5rem; /* Add margin below */
 }
 
 #skills .row.text-center .col-6 {
