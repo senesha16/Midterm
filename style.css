@@ -438,7 +438,8 @@ textarea {
 }
 
 .skills span1{
-    color: #fff2ec;
+    color: black;
+    font-size: 1rem;
 }
 .progress {
     height: 2rem; /* Increase the height of the progress bar */
@@ -448,7 +449,7 @@ textarea {
 }
 
 .progress-bar {
-    background-color: #f4c6cd; /* Match the theme */
+    background-color: #FF748B; /* Match the theme */
     font-size: 1.4rem; /* Increase the font size inside the progress bar */
     font-weight: 600;
     color: white;
