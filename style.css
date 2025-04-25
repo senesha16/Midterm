@@ -252,7 +252,6 @@ section{
     align-items: center;
     text-align: center;
     background: url('./img/bg2.png') no-repeat center center/cover; 
-    text-align: left; 
     min-height: 100vh; /* Ensure it covers the full viewport height */
     padding: 5rem 9%; /* Add padding for spacing */
     color: white; /* Ensure text is readable on the background */
