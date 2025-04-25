@@ -319,7 +319,6 @@ section{
     border: 0.2rem solid #FF748B;
     font-size: 2rem;
     border-radius: 50%;
-    margin: 3rem 1.5rem 3rem 0;
     transition: 0.3s ease;
     color: #FF748B;
 }
