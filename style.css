@@ -381,12 +381,30 @@ section{
     box-shadow: 0 0 25px #FF748B;
 }
 
+/* Contact Section */
+#contact {
+    font-size: 1.5rem; /* Set font size for the entire Contact section */
+}
+
+#contact .form-label {
+    font-size: 1.5rem; /* Ensure labels also have the same font size */
+}
+
+#contact input, 
+#contact textarea {
+    font-size: 1.5rem; /* Set font size for input fields and textarea */
+}
+
+#contact button {
+    font-size: 1.8rem; /* Set font size for the button */
+}   
+
 /* Contact Form Section */
 #contact-form {
     max-width: 600px;
     margin: 0 auto;
     background-color: #f9f9f9;
-    padding: 2rem;
+    /* padding: 2rem; */
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -458,7 +476,7 @@ textarea {
 }
 
 .progress {
-    height: 1.7rem; /* Increase the height of the progress bar */
+    height: 1.2rem; /* Increase the height of the progress bar */
     background-color: #DBD3D3; /* Light background for the progress bar */
     border-radius: 15px; /* Keep rounded corners */
     overflow: hidden;
@@ -478,7 +496,7 @@ textarea {
     color: #FF748B;
     margin-top: 2rem; /* Space above the paragraph */
     margin-bottom: 2rem; /* Space below the paragraph */
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .skills p {
@@ -488,6 +506,10 @@ textarea {
     margin-bottom: 2.5rem; /* Add margin below */
 }
 
+.skills h3{
+    color: black;
+    font-size: 2rem;
+}
 #skills .row.text-center .col-6 {
     margin-bottom: -1rem;
 }
@@ -500,14 +522,14 @@ textarea {
 
 /* Progress Bar Height */
 .progress-custom-height {
-    height: 8px;
+    height: 5px;
 }
 
 /* Circular Progress Bars */
 .circular-progress {
     position: relative;
-    height: 120px;
-    width: 120px;
+    height: 80px; /* Reduced height */
+    width: 80px; /* Reduced width */
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -518,15 +540,15 @@ textarea {
 .circular-progress::before {
     content: "";
     position: absolute;
-    height: 100px;
-    width: 100px;
+    height: 60px; /* Reduced inner circle size */
+    width: 60px; /* Reduced inner circle size */
     border-radius: 50%;
     background-color: #fff;
 }
 
 .progress-value {
     position: relative;
-    font-size: 2rem;
+    font-size: 0.5rem; /* Adjusted font size for smaller progress */
     color: black;
 }
 
@@ -536,3 +558,30 @@ textarea {
 .content-creation-progress { background: conic-gradient(#FF748B 284.4deg, #DBD3D3 0deg); }
 .collaboration-progress { background: conic-gradient(#FF748B 331.2deg, #DBD3D3 0deg); }
 .safety-security-progress { background: conic-gradient(#FF748B 345.6deg, #DBD3D3 0deg); }
+
+
+/* HOBBIES */
+#hobbies {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    background: url('./img/bg1.png') no-repeat center center/cover; 
+    min-height: 100vh; /* Ensure it covers the full viewport height */
+    padding: 5rem 9%; /* Add padding for spacing */
+    color: white; /* Ensure text is readable on the background */
+}
+
+/* EDUCATION */
+#education {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    background: url('./img/bg1.png') no-repeat center center/cover; 
+    min-height: 100vh; /* Ensure it covers the full viewport height */
+    padding: 5rem 9%; /* Add padding for spacing */
+    color: white; /* Ensure text is readable on the background */
+}

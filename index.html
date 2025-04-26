@@ -235,27 +235,49 @@
         </section>
 
         <!-- CONTACT -->
-        <section id="contact" class="py-5">
-            <div class="container px-5">
-                <h1 class="heading text-center mb-4">Contact<span> Me</span></h1>
-                <form id="contact-form" class="mx-auto" style="max-width: 600px;">
-                    <div class="input-box mb-3">
-                        <input type="text" name="name" placeholder="Full Name" class="form-control" required>
+        <section id="contact" class="about py-5">
+        <div class="container px-4 px-md-5">
+                <h1 class="mt-5">Contact <span> Me</span></h1>
+                <form>
+                    <div class="mb-1">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
                     </div>
-                    <div class="input-box mb-3">
-                        <input type="email" name="email" placeholder="Email" class="form-control" required>
+                    <div class="mb-1">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
                     </div>
-                    <div class="input-box mb-3">
-                        <input type="tel" name="phone" placeholder="Phone Number" class="form-control">
+                    <div class="mb-1">
+                        <label for="message" class="form-label text-white">Message</label>
+                        <textarea type="message" class="form-control" rows="3" id="message" placeholder="Enter your message" required></textarea>
                     </div>
-                    <div class="input-box mb-4">
-                        <textarea name="message" cols="30" rows="5" placeholder="Your Message" class="form-control" required></textarea>
+                    <div class="mb-1 d-flex justify-content-center">
+                        <button class="btn mt-4 d-flex justify-content-center w-50 mb-5 mt-5">Send</button>
                     </div>
-                    <input type="submit" value="Send Message" class="btn btn-primary w-100">
                 </form>
             </div>
-        </section>
+        </div>
 
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="social-icons d-flex justify-content-center mt-4">
+                <a href="https://linkedin.com/in/charisse-keara-begino-222886300/"><i class="bi bi-linkedin"></i></a>
+                <a href="https://facebook.com/kearabegino/"><i class="bi bi-facebook"></i></a>
+                <a href="https://instagram.com/krchrz/"><i class="bi bi-instagram"></i></a>
+                <a href="https://x.com/chrzkr"><i class="bi bi-twitter-x"></i></a>
+            </div>
+            
+            <ul class="list">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#hobbies">Hobbies</a>
+                <a href="#skills">Skills</a>
+                <a href="#education">Education</a>
+            </ul>
+            <p class="copyright text-center">© Kearies | All Rights Reserved</p>
+        </footer>
+        
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="percentages.js"></script>
         
