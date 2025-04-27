@@ -16,7 +16,7 @@ body{
     width: 100%;
     height: 100vh;
     overflow-x: hidden;
-    background-color: #f4c6cd;
+    background-color: #FFC6C6;
     color: white;
     text-align: center;
 }
@@ -584,4 +584,77 @@ textarea {
     min-height: 100vh; /* Ensure it covers the full viewport height */
     padding: 5rem 9%; /* Add padding for spacing */
     color: white; /* Ensure text is readable on the background */
+}
+
+.flip-card {
+    perspective: 1000px;
+    height: 300px;
+    margin-bottom: 20px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    padding: 20px;
+    text-align: center;
+}
+
+.flip-card-front {
+    background-color: #FF748B;
+    color: white;
+}
+
+.flip-card-back {
+    background-color: #ffffff;
+    color: #FF748B;
+    transform: rotateY(180deg);
+}
+
+.flip-card-back ul {
+    list-style: none;
+    padding: 0;
+}
+
+.flip-card-back ul li {
+    margin-bottom: 10px;
+}
+
+#education .year {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+    font-style: italic;
+    margin-top: 0.2rem;
+    font-weight: 500;
+}
+
+#education h5, a{
+    font-size: 2rem;
+    color: #FF748B;
+    font-weight: 700;
+}
+
+#education .award {
+    font-size: 1.5rem; /* Adjust font size if needed */
+    line-height: 1.2; /* Reduce line height to make lines closer */
+    margin-bottom: 0.5rem; /* Reduce spacing between lines */
+    margin-top: 0; /* Remove extra spacing above */
 }
