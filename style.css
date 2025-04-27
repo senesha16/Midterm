@@ -606,18 +606,18 @@ textarea {
 }
 
 .flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
+    position: absolute; /* Ensures both sides overlap perfectly */
+    width: 100%; /* Matches the width of the parent card */
+    height: 100%; /* Matches the height of the parent card */
+    backface-visibility: hidden; /* Hides the content when not visible */
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 15px;
+    border-radius: 10px; /* Ensures both sides have the same rounded corners */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     padding: 25px;
     text-align: center;
-    transition: box-shadow 0.3s ease;
+    transition: transform 0.6s ease; /* Smooth flip animation */
 }
 
 .flip-card-front {
@@ -631,16 +631,7 @@ textarea {
 .flip-card-back {
     background: linear-gradient(45deg, #FFC6C6, #FFE4E1); /* Soft peach gradient */
     color: #4A2E2E; /* Darker shade for readability */
-    transform: rotateY(180deg);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.flip-card-back ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    transform: rotateY(180deg); /* Ensures the back card is flipped initially */
 }
 
 #education .year {
