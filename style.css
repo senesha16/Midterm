@@ -157,8 +157,8 @@ section{
 
 
 .about h1, .skills h1, #education h1, #hobbies h1, #contact h1 {
-    font-family: 'Poppins', sans-serif; 
-    font-weight: 700;
+    font-family: 'Imperial Script', cursive;
+    font-weight: 400;
     font-size: 5rem;
     text-align: center;
     color:#FFC6C6;
@@ -166,8 +166,8 @@ section{
 
 #home h1 span, .about h1 span, #skills h1 span, #education h1 span, #hobbies h1 span, #contact span {
     color: #FF748B;
-    font-family: 'Poppins', sans-serif; 
-    font-weight: 700; 
+    font-family: 'Imperial Script', cursive;
+    font-weight: 400; 
     font-size: 5rem;
     
 }
@@ -624,7 +624,7 @@ textarea {
 }
 
 .flip-card-back {
-    background-color: #ffffff;
+    background-color: #FF748B;
     color: #FF748B;
     transform: rotateY(180deg);
 }
@@ -648,7 +648,7 @@ textarea {
 
 #education h5, a{
     font-size: 2rem;
-    color: #FF748B;
+    color: #9CAD8C;
     font-weight: 700;
 }
 
