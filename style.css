@@ -102,7 +102,7 @@ nav a:hover nav:active{
 @media (min-width: 768px) and (max-width: 991.98px) {
     /* Apply bold font for medium screens */
     body, h1, h2, h3, h4, h5, h6, p, span, a {
-        font-weight: bold;
+        font-weight: 700;
     }
 }
 
@@ -157,8 +157,8 @@ section{
 
 
 .about h1, .skills h1, #education h1, #hobbies h1, #contact h1 {
-    font-family: 'Imperial Script', cursive;
-    font-weight: 400;
+    font-family: 'Poppins', sans-serif; 
+    font-weight: 700;
     font-size: 5rem;
     text-align: center;
     color:#FFC6C6;
@@ -166,8 +166,8 @@ section{
 
 #home h1 span, .about h1 span, #skills h1 span, #education h1 span, #hobbies h1 span, #contact span {
     color: #FF748B;
-    font-family: 'Imperial Script', cursive;
-    font-weight: 400; 
+    font-family: 'Poppins', sans-serif; 
+    font-weight: 700; 
     font-size: 5rem;
     
 }
@@ -382,20 +382,7 @@ section{
 }
 
 /* Contact Section */
-#contact {
-    font-size: 1.5rem; /* Set font size for the entire Contact section */
-}
-
-#contact .form-label {
-    font-size: 1.5rem; /* Ensure labels also have the same font size */
-}
-
-#contact input, 
-#contact textarea {
-    font-size: 1.5rem; /* Set font size for input fields and textarea */
-}
-
-#contact button {
+#contact, .form-label, input, textarea, button {
     font-size: 1.8rem; /* Set font size for the button */
 }   
 
@@ -510,6 +497,7 @@ textarea {
     color: black;
     font-size: 2rem;
 }
+
 #skills .row.text-center .col-6 {
     margin-bottom: -1rem;
 }
@@ -577,26 +565,39 @@ textarea {
 #education {
     display: flex;
     flex-direction: column;
-    justify-content: center; 
-    align-items: center; 
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    background: url('./img/bg1.png') no-repeat center center/cover; 
-    min-height: 100vh; /* Ensure it covers the full viewport height */
-    padding: 5rem 9%; /* Add padding for spacing */
-    color: white; /* Ensure text is readable on the background */
+    /* background: linear-gradient(135deg, #FF748B 0%, #FFC6C6 100%); Gradient using provided colors */
+    background: url('./img/bg1.png') no-repeat center center/cover;
+    min-height: 100vh;
+    padding: 6rem 5%;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+#education .container {
+    position: relative;
+    z-index: 2;
 }
 
 .flip-card {
-    perspective: 1000px;
-    height: 300px;
-    margin-bottom: 20px;
+    perspective: 1500px;
+    height: 350px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+
+.flip-card:hover {
+    transform: scale(1.05);
 }
 
 .flip-card-inner {
     position: relative;
     width: 100%;
     height: 100%;
-    transition: transform 0.6s;
+    transition: transform 0.8s ease-in-out;
     transform-style: preserve-3d;
 }
 
@@ -607,54 +608,140 @@ textarea {
 .flip-card-front, .flip-card-back {
     position: absolute;
     width: 100%;
-    height: 80%;
+    height: 100%;
     backface-visibility: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 25px;
     text-align: center;
+    transition: box-shadow 0.3s ease;
 }
 
 .flip-card-front {
-    background-color: #FF748B;
-    color: white;
+    background: linear-gradient(45deg, #FF748B, #FF8DA1); /* Vibrant pink gradient */
+    color: #ffffff;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 .flip-card-back {
-    background-color: #FF748B;
-    color: #FF748B;
+    background: linear-gradient(45deg, #FFC6C6, #FFE4E1); /* Soft peach gradient */
+    color: #4A2E2E; /* Darker shade for readability */
     transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .flip-card-back ul {
     list-style: none;
     padding: 0;
-}
-
-.flip-card-back ul li {
-    margin-bottom: 10px;
+    margin: 0;
 }
 
 #education .year {
-    font-size: 1.7rem;
-    margin-bottom: 1rem;
+    font-size: 1.5rem;
     font-style: italic;
-    margin-top: 0.2rem;
     font-weight: 500;
+    color: #7A4A4A; /* Muted pinkish-brown for years */
+    margin-bottom: 1rem;
 }
 
-#education h5, a{
+#education h5 a {
     font-size: 2rem;
-    color: #9CAD8C;
-    font-weight: 700;
+    color: #D6455D; /* Slightly darker pink for links */
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#education h5 a:hover {
+    color: #FF8DA1; /* Brighter pink on hover */
+    text-decoration: underline;
 }
 
 #education .award {
-    font-size: 1.5rem; /* Adjust font size if needed */
-    line-height: 1.2; /* Reduce line height to make lines closer */
-    margin-bottom: 0.5rem; /* Reduce spacing between lines */
-    margin-top: 0; /* Remove extra spacing above */
+    font-size: 1.5rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    color: #5C3A3A; /* Slightly lighter for awards */
+}
+
+/* JHS */
+.jhs-card .flip-card-back::before {
+    width: 100%;
+    height: 100%;
+    background: url('./img/enverga.png') no-repeat center center/cover;
+    opacity: 0.1; /* Low opacity for subtle effect */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1; /* Low opacity for subtle effect */
+    z-index: 0;
+    border-radius: 15px; /* Match card corners */
+}
+
+.jhs-card .flip-card-front > *,
+.jhs-card .flip-card-back > * {
+    position: relative;
+    z-index: 1; /* Ensure content is above background */
+}
+
+/* SHS */
+.shs-card .flip-card-back::before {
+    width: 100%;
+    height: 100%;
+    background: url('./img/lv.png') no-repeat center center/cover;
+    opacity: 0.1; /* Low opacity for subtle effect */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1; /* Low opacity for subtle effect */
+    z-index: 0;
+    border-radius: 15px; /* Match card corners */
+}
+
+.shs-card .flip-card-front > *,
+.shs-card .flip-card-back > * {
+    position: relative;
+    z-index: 1; /* Ensure content is above background */
+}
+
+/* COLLEGE */
+.college-card .flip-card-back::before {
+    width: 100%;
+    height: 100%;
+    background: url('./img/nu.png') no-repeat center center/cover;
+    opacity: 0.1; /* Low opacity for subtle effect */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1; /* Low opacity for subtle effect */
+    z-index: 0;
+    border-radius: 15px; /* Match card corners */
+}
+
+.college-card .flip-card-front > *,
+.college-card .flip-card-back > * {
+    position: relative;
+    z-index: 1; /* Ensure content is above background */
+}
+
+#education h3{
+    color: white;
+    font-size: 2.3rem;
+    font-weight: 500;
 }
