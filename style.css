@@ -43,7 +43,7 @@ header a {
 .logo{
     font-size: 3rem;
     color: #FF748B;
-    font-weight: 800;
+    font-weight: 1000;
     cursor: pointer;
     transition: 0.5s ease;
 }
