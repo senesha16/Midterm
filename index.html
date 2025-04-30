@@ -30,15 +30,43 @@
         
         <!-- HEADER -->
         <header>
-                <a href="#home" class="logo">Keabadoobee</span></a>
-
-            <nav>
-                <a href="#home" class="active">Home</a>
-                <a href="#about">About</a>
-                <a href="#hobbies">Hobbies</a>
-                <a href="#skills">Skills</a>
-                <a href="#education">Education</a>
-                <a href="#contact">Contact</a>
+            <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #fff2ec;">
+                <div class="container-fluid">
+                    <a class="navbar-brand logo" href="#home">Keabadoobee</a>
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav"
+                        aria-controls="navbarNav"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto me-3"> <!-- Added 'me-3' for spacing -->
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#home">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#education">Education</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#skills">Skills</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#hobbies">Hobbies</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contact">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
         </header>
         
@@ -78,151 +106,6 @@
                     <!-- Image (moves above content on medium and smaller screens) -->
                     <div class="col-md-5 about-img text-center mb-4 mb-md-0">
                         <img src="./img/kea1.jpg" alt="Kea's Image" class="img-fluid rounded-circle" style="max-width: 80%;">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- HOBBIES -->
-        <section id="hobbies">
-            <h1>Hobbies & <span>Interests</span></h1>
-            <p>Details about projects will go here.</p>
-        </section>
-
-     <!-- SKILLS -->
-        <section id="skills" class="skills py-5 bg-dark">
-            <div class="container text-white">
-                <h2 class="text-center mb-2 mt-5">My <span>Skills</span></h2>
-                <div class="row">
-                    <!-- Technical Skills -->
-                    <div class="col-lg-6 mb-5 mb-lg-0">
-                        <h3 class="text-center mb-4">Technical Skills</h3>
-                        <!-- HTML -->
-                        <div class="technical-skill">
-                            <i class="bi bi-filetype-html skill-icon html-icon"></i>
-                            <div class="w-100">
-                                <div class="skill-header">
-                                    <span1>HTML</span1>
-                                    <span1 class="skill-percentage" data-skill="90">90%</span1>
-                                </div>
-                                <div class="progress  ">
-                                    <div class="progress-bar" role="progressbar"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- CSS -->
-                        <div class="technical-skill">
-                            <i class="bi bi-filetype-css skill-icon css-icon"></i>
-                            <div class="w-100">
-                                <div class="skill-header">
-                                    <span1>CSS</span1>
-                                    <span1 class="skill-percentage" data-skill="85">85%</span1>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- JAVA -->
-                        <div class="technical-skill">
-                            <i class="bi bi-filetype-java skill-icon java-icon"></i>
-                            <div class="w-100">
-                                <div class="skill-header">
-                                    <span1>JAVA</span1>
-                                    <span1 class="skill-percentage" data-skill="80">80%</span1>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- MySQL -->
-                        <div class="technical-skill">
-                            <i class="bi bi-database skill-icon mysql-icon"></i>
-                            <div class="w-100">
-                                <div class="skill-header">
-                                    <span1>MySQL</span1>
-                                    <span1 class="skill-percentage" data-skill="75">75%</span1>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- PHP -->
-                        <div class="technical-skill">
-                            <i class="bi bi-filetype-php skill-icon php-icon"></i>
-                            <div class="w-100">
-                                <div class="skill-header">
-                                    <span1>PHP</span1>
-                                    <span1 class="skill-percentage" data-skill="70">70%</span1>
-                                </div>
-                                <div class="progress  ">
-                                    <div class="progress-bar" role="progressbar"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- JavaScript -->
-                        <div class="technical-skill">
-                            <i class="bi bi-filetype-js skill-icon js-icon"></i>
-                            <div class="w-100">
-                                <div class="skill-header">
-                                    <span1>JavaScript</span1>
-                                    <span1 class="skill-percentage" data-skill="85">85%</span1>
-                                </div>
-                                <div class="progress  ">
-                                    <div class="progress-bar" role="progressbar"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Professional Skills -->
-                    <div class="col-lg-6">
-                        <h3 class="text-center mb-2">Professional Skills</h3>
-                        <div class="row text-center">
-                            <!-- Technology Basics -->
-                            <div class="col-6 mb-4">
-                                <div class="circular-progress technology-basics-progress">
-                                    <span2 class="progress-value">78%</span2>
-                                </div>
-                                <p class="mt-2">Technology Basics</p>
-                            </div>
-                            <!-- Digital Citizenship -->
-                            <div class="col-6 mb-2">
-                                <div class="circular-progress digital-citizenship-progress">
-                                    <span2 class="progress-value">95%</span2>
-                                </div>
-                                <p class="mt-2">Digital Citizenship</p>
-                            </div>
-                            <!-- Information Management -->
-                            <div class="col-6 mb-2">
-                                <div class="circular-progress information-management-progress">
-                                    <span2 class="progress-value">82%</span2>
-                                </div>
-                                <p class="mt-2">Information Management</p>
-                            </div>
-                            <!-- Content Creation -->
-                            <div class="col-6 mb-2">
-                                <div class="circular-progress content-creation-progress">
-                                    <span2 class="progress-value">79%</span2>
-                                </div>
-                                <p class="mt-2">Content Creation</p>
-                            </div>
-                            <!-- Collaboration -->
-                            <div class="col-6 mb-2">
-                                <div class="circular-progress collaboration-progress">
-                                    <span2 class="progress-value">92%</span2>
-                                </div>
-                                <p class="mt-2">Collaboration</p>
-                            </div>
-                            <!-- Safety and Security -->
-                            <div class="col-6 mb-2">
-                                <div class="circular-progress safety-security-progress">
-                                    <span2 class="progress-value">96%</span2>
-                                </div>
-                                <p class="mt-2">Safety and Security</p>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -308,6 +191,151 @@
             </div>
         </section>
 
+     <!-- SKILLS -->
+        <section id="skills" class="skills py-5 bg-dark">
+            <div class="container text-white">
+                <h2 class="text-center mb-2 mt-5">My <span>Skills</span></h2>
+                <div class="row">
+                    <!-- Technical Skills -->
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+                        <h3 class="text-center mb-4">Technical Skills</h3>
+                        <!-- HTML -->
+                        <div class="technical-skill">
+                            <div class="w-100">
+                                <div class="skill-header">
+                                    <span1>HTML</span1>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 80%;">
+                                        <span class="skill-percentage" data-skill="80">80%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- CSS -->
+                        <div class="technical-skill">
+                            <div class="w-100">
+                                <div class="skill-header">
+                                    <span1>CSS</span1>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 85%;">
+                                        <span class="skill-percentage" data-skill="85">85%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- JAVA -->
+                        <div class="technical-skill">
+                            <div class="w-100">
+                                <div class="skill-header">
+                                    <span1>JAVA</span1>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 80%;">
+                                        <span class="skill-percentage" data-skill="80">80%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- MySQL -->
+                        <div class="technical-skill">
+                            <div class="w-100">
+                                <div class="skill-header">
+                                    <span1>MySQL</span1>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 75%;">
+                                        <span class="skill-percentage" data-skill="75">75%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- PHP -->
+                        <div class="technical-skill">
+                            <div class="w-100">
+                                <div class="skill-header">
+                                    <span1>PHP</span1>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 70%;">
+                                        <span class="skill-percentage" data-skill="70">70%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- JavaScript -->
+                        <div class="technical-skill">
+                            <div class="w-100">
+                                <div class="skill-header">
+                                    <span1 class="mt-2">JavaScript</span1>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 85%;">
+                                        <span class="skill-percentage" data-skill="85">85%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Professional Skills -->
+                    <div class="col-lg-6">
+                        <h3 class="text-center mb-2">Professional Skills</h3>
+                        <div class="row text-center">
+                            <!-- Technology Basics -->
+                            <div class="col-6 mb-4">
+                                <div class="circular-progress technology-basics-progress">
+                                    <span2 class="progress-value">78%</span2>
+                                </div>
+                                <p class="mt-2">Technology Basics</p>
+                            </div>
+                            <!-- Digital Citizenship -->
+                            <div class="col-6 mb-2">
+                                <div class="circular-progress digital-citizenship-progress">
+                                    <span2 class="progress-value">95%</span2>
+                                </div>
+                                <p class="mt-2">Digital Citizenship</p>
+                            </div>
+                            <!-- Information Management -->
+                            <div class="col-6 mb-2">
+                                <div class="circular-progress information-management-progress">
+                                    <span2 class="progress-value">82%</span2>
+                                </div>
+                                <p class="mt-2">Information Management</p>
+                            </div>
+                            <!-- Content Creation -->
+                            <div class="col-6 mb-2">
+                                <div class="circular-progress content-creation-progress">
+                                    <span2 class="progress-value">79%</span2>
+                                </div>
+                                <p class="mt-2">Content Creation</p>
+                            </div>
+                            <!-- Collaboration -->
+                            <div class="col-6 mb-2">
+                                <div class="circular-progress collaboration-progress">
+                                    <span2 class="progress-value">92%</span2>
+                                </div>
+                                <p class="mt-2">Collaboration</p>
+                            </div>
+                            <!-- Safety and Security -->
+                            <div class="col-6 mb-2">
+                                <div class="circular-progress safety-security-progress">
+                                    <span2 class="progress-value">96%</span2>
+                                </div>
+                                <p class="mt-2">Safety and Security</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOBBIES -->
+        <section id="hobbies">
+            <h1>Hobbies & <span>Interests</span></h1>
+            <p>Details about projects will go here.</p>
+        </section>
+
         <!-- CONTACT -->
         <section id="contact" class="about py-5">
         <div class="container px-4 px-md-5">
@@ -331,7 +359,7 @@
                 </form>
             </div>
         </div>
-
+        </section>
 
         <!-- FOOTER -->
         <footer class="footer">
@@ -342,13 +370,6 @@
                 <a href="https://x.com/chrzkr"><i class="bi bi-twitter-x"></i></a>
             </div>
             
-            <ul class="list">
-                <a href="#home" class="active">Home</a>
-                <a href="#about">About</a>
-                <a href="#hobbies">Hobbies</a>
-                <a href="#skills">Skills</a>
-                <a href="#education">Education</a>
-            </ul>
             <p class="copyright text-center">© Kearies | All Rights Reserved</p>
         </footer>
         

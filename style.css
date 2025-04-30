@@ -27,7 +27,7 @@ header {
     left: 0;
     width: 100%;
     padding: 1rem 9%;
-    background: #fff2ec;
+    background: #FEF2F4;
     filter: drop-shadow(10px);
     display: flex;
     justify-content: space-between;
@@ -36,38 +36,45 @@ header {
 }
 
 header a {
-    text-decoration: none; 
-    color: #FF748B; 
+    text-decoration: none;
+    color: #FF748B;
 }
 
-.logo{
+
+.logo {
     font-size: 3rem;
     color: #FF748B;
     font-weight: 1000;
     cursor: pointer;
     transition: 0.5s ease;
+    margin-left: 10rem;
 }
 
-.logo:hover{
+.logo:hover {
     transform: scale(1.1);
+    color: #af4523;
 }
 
-nav a{
+nav a.nav-link {
     font-size: 1.8rem;
     color: #FF748B;
     margin-left: 4rem;
     font-weight: 500;
-    transition: 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
     border-bottom: 3px solid transparent;
 }
 
-nav a:hover nav:active{
-    color: #FF748B;
-    border-bottom: 3px solid #FF748B;
+nav a.nav-link:hover,
+nav a.nav-link.active {
+    color: white;
+    background-color: #FF748B;
+    border-bottom: 3px solid #fff;
 }
 
-@media(max-width:995px){
-    nav{
+@media (max-width: 995px) {
+    nav {
         position: absolute;
         display: none;
         top: 0;
@@ -76,26 +83,28 @@ nav a:hover nav:active{
         border-left: 3px solid #FF748B;
         border-bottom: 3px solid #FF748B;
         border-bottom-left-radius: 2rem;
-        padding: 1rem solid;
-        background-color: #161616;
-        border-top: 0.1rem solid rgba(0,0,0,0.1);
+        padding: 1rem;
+        background-color: #af4523;
+        border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
     }
 
-    nav.active{
+    nav.active {
         display: block;
     }
 
-    nav a{
+    nav a.nav-link {
         display: block;
         font-size: 2rem;
         margin: 3rem 0;
-    }
-
-    nav a:hover,
-    nav a.active{
         padding: 1rem;
         border-radius: 0.5rem;
-        border-bottom: 0.5rem solid #FF748B;
+    }
+
+    nav a.nav-link:hover,
+    nav a.nav-link.active {
+        background-color: #FF748B;
+        color: white;
+        border-bottom: 0.5rem solid #fff;
     }
 }
 
@@ -430,6 +439,7 @@ textarea {
     border-radius: 15px; /* Add rounded corners */
     background-color: #fff; /* Optional: Add a background color */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    margin-top: 5rem;
 }
 
 .skills {
@@ -454,7 +464,7 @@ textarea {
 
 .skills span1{
     color: black;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 .skills span2{
@@ -463,20 +473,31 @@ textarea {
 }
 
 .progress {
-    height: 1.2rem; /* Increase the height of the progress bar */
-    background-color: #DBD3D3; /* Light background for the progress bar */
-    border-radius: 15px; /* Keep rounded corners */
+    height: 2.5rem; /* Increased height to match the image's proportions */
+    background-color: #DBD3D3; /* Kept your background color */
+    border-radius: 50px; /* More rounded ends to match the image */
     overflow: hidden;
+    position: relative;
+    margin-bottom: 1rem;
+    margin-left: 3rem; /* Added left margin for spacing */
 }
 
 .progress-bar {
-    background-color: #FF748B; /* Match the theme */
-    font-size: 1.4rem; /* Increase the font size inside the progress bar */
+    background-color: #FF748B; /* Kept your fill color */
+    height: 100%;
+    display: flex; /* Use flexbox to center the percentage text */
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px; /* Match the rounded ends */
+    transition: width 0.5s ease;
+}
+
+.skill-percentage {
+    color: white; /* White text to be readable on #FF748B */
+    font-size: 1.4rem; /* Adjusted font size for better fit */
     font-weight: 600;
-    color: white;
-    text-align: center;
-    line-height: 2.5rem; /* Center the text vertically */
-    transition: width 0.5s ease; /* Smooth animation for the progress bar */
+    position: relative;
+    z-index: 1; /* Ensure text is above any background */
 }
 
 #skills p {
