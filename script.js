@@ -57,22 +57,30 @@ var carousel = new bootstrap.Carousel(myCarousel, {
 document.getElementById("contactForm").addEventListener("submit", function (e) {
     e.preventDefault(); // Prevent the default form submission
 
-    // Clear the form fields
-    document.getElementById("contactForm").reset();
+    // Get form values
+    const name = document.getElementById("firstname").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
 
-    // Display the SweetAlert
-    Swal.fire({
-        title: "Message Sent!",
-        text: "The owner received your message. We'll get back to you soon!",
-        imageUrl: "https://via.placeholder.com/400x200.png?text=Message+Sent",
-        imageWidth: 400,
-        imageHeight: 200,
-        imageAlt: "Custom image",
-    });
-});
+    // Validate form fields
+    if (!name || !email || !message) {
+        // Show SweetAlert error if fields are empty
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Please fill out all fields before submitting!",
+            confirmButtonColor: "#FF748B", // Custom button color
+        });
+    } else {
+        // Show SweetAlert success if all fields are filled
+        Swal.fire({
+            icon: "success",
+            title: "Message Sent!",
+            text: "The owner received your message. We'll get back to you soon!",
+            confirmButtonColor: "#FF748B", // Custom button color
+        });
 
-Swal.fire({
-    title: "Test Alert",
-    text: "SweetAlert is working!",
-    icon: "success",
+        // Clear the form fields
+        document.getElementById("contactForm").reset();
+    }
 });

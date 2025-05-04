@@ -178,10 +178,6 @@ nav a.nav-link.active {
         background-color: #FF748B;
         border-radius: 5px;
     }
-
-    body, h1, h2, h3, h4, h5, h6, p, a, li, span, button, input, textarea {
-        font-weight: normal !important; /* Ensures all text has normal font weight */
-    }
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -895,20 +891,12 @@ section{
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: url('./img/bg2.png') no-repeat center center/cover;
+    background: url('./img/bg1.png') no-repeat center center/cover;
     min-height: 100vh;
     padding: 5rem 9%;
     color: white;
 }
 
-.projects h5{
-    color: #fff;
-    font-size: 2.5rem;
-}
-
-.projects p{
-    font-size: 2rem;
-}
 .projects .container {
     width: 100%;
     max-width: 1400px;
@@ -936,12 +924,11 @@ section{
 .project-card {
     position: relative;
     width: 100%;
-    height: 350px;
+    height: 300px;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
-    background: linear-gradient(45deg, rgba(255, 116, 139, 0.9), rgba(255, 198, 198, 0.9));
 }
 
 .project-card:hover {
@@ -949,6 +936,9 @@ section{
 }
 
 .project-content {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     display: flex;
@@ -956,7 +946,9 @@ section{
     justify-content: center;
     align-items: center;
     padding: 2rem;
+    background: linear-gradient(45deg, rgba(255, 116, 139, 0.9), rgba(255, 198, 198, 0.9));
     opacity: 1;
+    z-index: 1;
     transition: opacity 0.3s ease;
 }
 
@@ -973,9 +965,10 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
+    background: linear-gradient(45deg, rgba(255, 116, 139, 0.9), rgba(255, 198, 198, 0.9));
     opacity: 0;
+    z-index: 2;
     transition: opacity 0.3s ease;
-    border-radius: 10px;
 }
 
 .project-card:hover .project-overlay {
@@ -1024,7 +1017,7 @@ section{
 
 /* CONTACT */
 #contact {
-    background: url('./img/bg1.png') no-repeat center center/cover;
+    background: url('./img/bg2.png') no-repeat center center/cover;
     min-height: 100vh;
     padding: 5rem 9%;
     color: #FFC6C6;
@@ -1033,7 +1026,7 @@ section{
 #contact h1 {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
-    font-size: 5rem;
+    font-size: 5rem; /* Increased font size for the heading */
     text-align: center;
 }
 
@@ -1059,99 +1052,45 @@ section{
     border-radius: 10px;
 }
 
-.form-floating > .form-control,
-.form-floating > textarea {
-    border: 2px solid #FF748B;
-    background-color: #fff;
-    color: #4A2E2E;
-    font-size: 1.6rem;
-}
-
-.form-floating > textarea {
-    height: 100px;
-}
-
-.form-floating > label {
-    font-size: 1.6rem;
-    color: #7A4A4A;
-    opacity: 0.7;
-}
-
-.form-floating > .form-control:focus,
-.form-floating > textarea:focus {
-    border-color: #FF8DA1;
-    box-shadow: none;
-}
-
-.form-floating > .form-control:not(:placeholder-shown) ~ label,
-.form-floating > .form-control:focus ~ label,
-.form-floating > textarea:not(:placeholder-shown) ~ label,
-.form-floating > textarea:focus ~ label {
+#contact form .form-label {
+    font-size: 1.5rem; /* Increased font size for labels */
     color: #FF748B;
-    opacity: 1;
-}
-
-#contactButton {
-    background-color: #FF748B;
-    border: none;
-    color: white;
-    font-size: 1.8rem;
-    padding: 1rem 3rem;
-    text-align: center; /* Ensures text is centered */
-    display: inline-block; /* Ensures proper alignment */
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-#contactButton:hover {
-    background-color: black; /* Changes background to black on hover */
-    color: white; /* Keeps the text color white */
-    transform: none; /* Removes scaling effect */
-}
-
-/* Contact Form */
-#contactForm {
-    background-color: #fff;
-    border-radius: 15px;
-    padding: 2rem;
-}
-
-#contactForm .form-label {
-    font-size: 1.8rem;
-    color: #FF748B;
-    font-weight: 600;
     margin-bottom: 0.5rem;
     display: block;
 }
 
-#contactForm .form-control {
+#contact form .form-control {
+    font-size: 1.5rem; /* Increased font size for inputs */
+    padding: 1.2rem; /* Adjusted padding for better spacing */
     border: 2px solid #FF748B;
     border-radius: 10px;
-    font-size: 1.4rem;
-    padding: 1rem;
     color: #4A2E2E;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-#contactForm .form-control:focus {
-    border-color: #FFC6C6;
+#contact form .form-control:focus {
+    border-color: #FF748B;
     outline: none;
 }
 
-#contactForm textarea {
-    resize: none;
+#contact form textarea {
+    resize: none; /* Prevent resizing */
+    height: 150px; /* Adjusted height for better visibility */
 }
 
 #contactButton {
     background-color: #FF748B;
     border: none;
     color: white;
-    font-size: 1.8rem;
-    padding: 1rem 3rem;
+    font-size: 2rem; /* Increased font size for the button */
+    padding: 1.2rem 3.5rem; /* Adjusted padding for better spacing */
+    border-radius: 50px;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    text-align: center;
 }
 
 #contactButton:hover {
     background-color: #FFC6C6;
-    color: #FF748B;
     transform: scale(1.05);
 }
 
@@ -1160,6 +1099,12 @@ section{
     background: linear-gradient(45deg, #FFE4E1, #FFC6C6);
     color: #af4523;
     padding: 5rem 9%;
+}
+
+.footer .container {
+    border: 5px solid #FF748B;
+    background-color: #fff;
+    padding: 3rem;
 }
 
 .footer .logo {

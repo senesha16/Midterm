@@ -413,7 +413,7 @@
                 <div class="project-card">
                     <div class="project-content">
                         <h5 class="project-title">NUFinds</h5>
-                        <p class="project-desc">A campus-exclusive app for NU Lipa that helps students report lost items, browse found listings, and get updates—making lost and found faster and easier.</p>
+                        <p class="project-desc">NUFinds - A campus-exclusive app for NU Lipa that helps students report lost items, browse found listings, and get updates—making lost and found faster and easier.</p>
                     </div>
                     <div class="project-overlay">
                         <img src="./img/nufindslogo.png" class="card-img-top" alt="NUFinds Logo">
@@ -424,8 +424,8 @@
             <div class="col-md-4 mb-4">
                 <div class="project-card">
                     <div class="project-content">
-                        <h5 class="project-title">Keabadoobee's Web</h5>
-                        <p class="project-desc">A personal website made to show my personality, aesthetic, and who I am. A digital space where creativity meets authenticity.</p>
+                        <h5 class="project-title">Keabadoobee</h5>
+                        <p class="project-desc">Keabadoobee Personal website made to show my personality, aesthetic, and who I am. A digital space where creativity meets authenticity.</p>
                     </div>
                     <div class="project-overlay">
                         <img src="./img/kealogo.png" class="card-img-top" alt="Keabadoobee Logo">
@@ -444,16 +444,16 @@
                     <div class="row mb-3">
                         <div class="col-md-6 mb-3">
                             <label for="firstname" class="form-label">Name</label>
-                            <input type="text" class="form-control rounded-3" id="firstname" name="firstname" placeholder="Enter your name" required>
+                            <input type="text" class="form-control rounded-3" id="firstname" name="firstname" placeholder="Enter your name">
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control rounded-3" id="email" name="email" placeholder="Enter your email" required>
+                            <input type="email" class="form-control rounded-3" id="email" name="email" placeholder="Enter your email">
                         </div>
                     </div>
                     <div class="mb-3">
                         <label for="message" class="form-label">Message</label>
-                        <textarea class="form-control rounded-3" id="message" name="message" placeholder="Enter your message" rows="5" required></textarea>
+                        <textarea class="form-control rounded-3" id="message" name="message" placeholder="Enter your message" rows="5"></textarea>
                     </div>
                     <div class="text-center">
                         <button type="submit" class="btn btn-primary rounded-pill px-5 mt-4 w-50" id="contactButton">Send</button>
@@ -495,10 +495,11 @@
                 <hr class="my-4" style="border-color: #FF748B;">
                 <p class="text-center mb-0" style="font-size: 1.4rem; color: #af4523;">© 2025 Keara Begino | All Rights Reserved</p>
             </div>
+
         </footer>
         
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="navbar.js"></script>
+        <script src="script.js"></script>
         
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -512,10 +513,39 @@
             crossorigin="anonymous"
         ></script>
 
-        <!-- SweetAlert2 Script -->
-        <script 
-            src="https://cdn.jsdelivr.net/npm/sweetalert2@11"
-            ></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script>
+            document.getElementById("contactForm").addEventListener("submit", function (e) {
+                e.preventDefault(); // Prevent the default form submission
+        
+                // Get form values
+                const name = document.getElementById("firstname").value.trim();
+                const email = document.getElementById("email").value.trim();
+                const message = document.getElementById("message").value.trim();
+        
+                // Validate form fields
+                if (!name || !email || !message) {
+                    // Show SweetAlert error if fields are empty
+                    Swal.fire({
+                        icon: "error",
+                        title: "Oops...",
+                        text: "Please fill out all fields before submitting!",
+                    });
+                } else {
+                    // Show SweetAlert success if all fields are filled
+                    Swal.fire({
+                        icon: "success",
+                        title: "Message Sent!",
+                        text: "The owner received your message. We'll get back to you soon!",
+                    });
+        
+                    // Clear the form fields
+                    document.getElementById("contactForm").reset();
+                }
+            });
+        </script>
+
+        
 
     </body>
 </html>
