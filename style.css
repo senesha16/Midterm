@@ -897,6 +897,11 @@ section{
     color: white;
 }
 
+.projects h5{
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+}
 .projects .container {
     width: 100%;
     max-width: 1400px;
