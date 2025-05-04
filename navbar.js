@@ -53,3 +53,26 @@ var carousel = new bootstrap.Carousel(myCarousel, {
     interval: 4000,
     wrap: true
 }); 
+
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+    e.preventDefault(); // Prevent the default form submission
+
+    // Clear the form fields
+    document.getElementById("contactForm").reset();
+
+    // Display the SweetAlert
+    Swal.fire({
+        title: "Message Sent!",
+        text: "The owner received your message. We'll get back to you soon!",
+        imageUrl: "https://via.placeholder.com/400x200.png?text=Message+Sent",
+        imageWidth: 400,
+        imageHeight: 200,
+        imageAlt: "Custom image",
+    });
+});
+
+Swal.fire({
+    title: "Test Alert",
+    text: "SweetAlert is working!",
+    icon: "success",
+});
