@@ -46,7 +46,7 @@ header a {
     font-weight: 1000;
     cursor: pointer;
     transition: 0.5s ease;
-    margin-left: 10rem;
+    margin: 0.2rem;
 }
 
 .logo:hover {
@@ -250,7 +250,6 @@ section{
     cursor: pointer;
     text-align: center;
 }
-
 
 /* About Section */
 .about {
@@ -534,6 +533,61 @@ section{
     color: white; /* Ensure text is readable on the background */
 }
 
+.hobbies .container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    border: 5px solid #FFC6C6;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 5rem;
+}
+
+.hobbies h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 5rem;
+    text-align: center;
+    color: #FFC6C6;
+}
+
+.hobbies .card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    background-color: #FFE4E1;
+}
+
+.hobbies .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.hobbies .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.hobbies .card-body {
+    padding: 2rem;
+}
+
+.hobbies .card-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #FF748B;
+    margin-bottom: 1rem;
+}
+
+.hobbies .card-text {
+    font-size: 1.6rem;
+    color: #4A2E2E;
+    line-height: 1.6;
+}
+
 /* EDUCATION */
 #education {
     display: flex;
@@ -541,7 +595,6 @@ section{
     justify-content: center;
     align-items: center;
     text-align: center;
-    /* background: linear-gradient(135deg, #FF748B 0%, #FFC6C6 100%); Gradient using provided colors */
     background: url('./img/bg1.png') no-repeat center center/cover;
     min-height: 100vh;
     padding: 6rem 5%;
@@ -579,22 +632,22 @@ section{
 }
 
 .flip-card-front, .flip-card-back {
-    position: absolute; /* Ensures both sides overlap perfectly */
-    width: 100%; /* Matches the width of the parent card */
-    height: 100%; /* Matches the height of the parent card */
-    backface-visibility: hidden; /* Hides the content when not visible */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 10px; /* Ensures both sides have the same rounded corners */
+    border-radius: 10px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     padding: 25px;
     text-align: center;
-    transition: transform 0.6s ease; /* Smooth flip animation */
+    transition: transform 0.6s ease;
 }
 
 .flip-card-front {
-    background: linear-gradient(45deg, #FF748B, #FF8DA1); /* Vibrant pink gradient */
+    background: linear-gradient(60deg, #FF748B, #FFC6C6);
     color: #ffffff;
     font-size: 1.8rem;
     font-weight: 600;
@@ -616,34 +669,33 @@ section{
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     padding: 25px;
     text-align: center;
-    background-color: #fff; /* Solid fallback */
+    background-color: #fff;
 }
 
-/* Remove ::before for simplicity */
 .jhs-card .flip-card-back::before,
 .shs-card .flip-card-back::before,
 .college-card .flip-card-back::before {
-    content: none; /* Disable background image */
+    content: none;
 }
 
 #education .year {
     font-size: 1.5rem;
     font-style: italic;
     font-weight: 500;
-    color: #7A4A4A; /* Muted pinkish-brown for years */
+    color: #7A4A4A;
     margin-bottom: 1rem;
 }
 
 #education h5 a {
     font-size: 2rem;
-    color: #D6455D; /* Slightly darker pink for links */
+    color: #D6455D;
     font-weight: 600;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 #education h5 a:hover {
-    color: #FF8DA1; /* Brighter pink on hover */
+    color: #FF8DA1;
     text-decoration: underline;
 }
 
@@ -651,76 +703,73 @@ section{
     font-size: 1.5rem;
     line-height: 1.4;
     margin-bottom: 1rem;
-    color: #5C3A3A; /* Slightly lighter for awards */
+    color: #5C3A3A;
 }
 
-/* JHS */
 .jhs-card .flip-card-back::before {
     width: 100%;
     height: 100%;
     background: url('./img/enverga.png') no-repeat center center/cover;
-    opacity: 0.1; /* Low opacity for subtle effect */
+    opacity: 0.1;
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0.1; /* Low opacity for subtle effect */
+    opacity: 0.1;
     z-index: 0;
-    border-radius: 15px; /* Match card corners */
+    border-radius: 15px;
 }
 
 .jhs-card .flip-card-front > *,
 .jhs-card .flip-card-back > * {
     position: relative;
-    z-index: 1; /* Ensure content is above background */
+    z-index: 1;
 }
 
-/* SHS */
 .shs-card .flip-card-back::before {
     width: 100%;
     height: 100%;
     background: url('./img/lv.png') no-repeat center center/cover;
-    opacity: 0.1; /* Low opacity for subtle effect */
+    opacity: 0.1;
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0.1; /* Low opacity for subtle effect */
+    opacity: 0.1;
     z-index: 0;
-    border-radius: 15px; /* Match card corners */
+    border-radius: 15px;
 }
 
 .shs-card .flip-card-front > *,
 .shs-card .flip-card-back > * {
     position: relative;
-    z-index: 1; /* Ensure content is above background */
+    z-index: 1;
 }
 
-/* COLLEGE */
 .college-card .flip-card-back::before {
     width: 100%;
     height: 100%;
     background: url('./img/nu.png') no-repeat center center/cover;
-    opacity: 0.1; /* Low opacity for subtle effect */
+    opacity: 0.1;
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0.1; /* Low opacity for subtle effect */
+    opacity: 0.1;
     z-index: 0;
-    border-radius: 15px; /* Match card corners */
+    border-radius: 15px;
 }
 
 .college-card .flip-card-front > *,
 .college-card .flip-card-back > * {
     position: relative;
-    z-index: 1; /* Ensure content is above background */
+    z-index: 1;
 }
 
 #education h3{
@@ -730,13 +779,12 @@ section{
 }
 
 #education ul {
-    list-style: none; /* Removes the bullet points */
-    padding: 0; /* Removes default padding */
-    margin: 0; /* Removes default margin */
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 /* CONTACT */
-/* Contact Section */
 #contact {
     background: url('./img/bg2.png') no-repeat center center/cover;
     min-height: 100vh;
@@ -755,7 +803,6 @@ section{
     color: #FF748B;
 }
 
-/* Container Styling */
 #contact .container {
     width: 100%;
     max-width: 1400px;
@@ -768,7 +815,6 @@ section{
     margin-top: 5rem;
 }
 
-/* Form Styling */
 #contact form {
     padding: 2rem;
     background-color: #fff;
@@ -807,7 +853,6 @@ section{
     opacity: 1;
 }
 
-/* Button Styling */
 #contactButton {
     background-color: #FF748B;
     border: none;

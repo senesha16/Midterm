@@ -28,3 +28,28 @@ document.addEventListener('DOMContentLoaded', () => {
     // Run initially to set active link on page load
     setActiveLink();
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const drawers = document.querySelectorAll('.hobby-drawer');
+
+    drawers.forEach(drawer => {
+        const header = drawer.querySelector('.drawer-header');
+        const content = drawer.querySelector('.drawer-content');
+
+        header.addEventListener('click', () => {
+            const isOpen = content.classList.contains('show');
+            // Close all drawers
+            drawers.forEach(d => d.querySelector('.drawer-content').classList.remove('show'));
+            // Open clicked drawer if it wasn't open
+            if (!isOpen) {
+                content.classList.add('show');
+            }
+        });
+    });
+});
+
+var myCarousel = document.querySelector('#hobbiesCarousel');
+var carousel = new bootstrap.Carousel(myCarousel, {
+    interval: 4000,
+    wrap: true
+}); 
